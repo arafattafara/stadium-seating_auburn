@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stadium Seat Marker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Stadium Seating Marker</h1>
+    <p>Click on the stadium map to mark where someone will sit.</p>
+  </header>
+
+  <main class="layout">
+    <section class="card map-card">
+      <div id="mapWrapper" class="map-wrapper" title="Click to add a seat marker">
+        <img id="stadiumImage" src="assets/stadium-map-high-resolution.png" alt="Stadium seating map" />
+        <div id="markersLayer"></div>
+      </div>
+    </section>
+
+    <aside class="card side-panel">
+      <h2>People Sitting Here</h2>
+      <div id="seatList" class="seat-list empty">No seats marked yet.</div>
+    </aside>
+  </main>
+
+  <dialog id="seatDialog">
+    <form method="dialog" id="seatForm">
+      <h2>Add Seat Marker</h2>
+      <label>
+        Name
+        <input id="personName" type="text" placeholder="Example: Mohammad" required />
+      </label>
+      <label>
+        Seat/Section Note
+        <input id="seatNote" type="text" placeholder="Example: Section 43, Row 5" />
+      </label>
+      <div class="dialog-buttons">
+        <button type="button" id="cancelBtn">Cancel</button>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
